@@ -37,4 +37,13 @@ export const ptBR = {
     edit: "Editar",
     back: "Voltar",
   },
+  notification: {
+    title: "Timer Finalizado!",
+    body: "Seu descanso acabou!",
+  },
+  timer: {
+    init: "INICIAR",
+    pause: "PAUSAR",
+    reset: "RESETAR",
+  },
 };

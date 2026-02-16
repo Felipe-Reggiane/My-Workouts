@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
 
-import { Images } from "@/assets/images";
 import { BaseColors } from "@/constants/theme";
 import { ButtonDefault } from "@/src/components/buttonDefault";
 import { ContainerView } from "@/src/components/containerView";
@@ -26,7 +25,6 @@ export default function AuthScreen() {
     "textSecondary",
   );
 
-  const { Google } = Images.icons;
   return (
     <ContainerView style={styles.container} headerHasPrincipalIcon>
       <ThemedText type="title" style={styles.title}>
@@ -96,7 +94,7 @@ export default function AuthScreen() {
         {/* TO DO: Add login with google logic, integrate with firebase */}
         <ButtonDefault
           text={translateText.auth.login.googleButton}
-          onPress={() => {}}
+          onPress={() => router.push("/(tabs)")}
           variant="tertiary"
           iconName={"Google"}
         />

@@ -37,4 +37,13 @@ export const en = {
     edit: "Edit",
     back: "Back",
   },
+  notification: {
+    title: "Timer Finished!",
+    body: "Your rest is over!",
+  },
+  timer: {
+    init: "START",
+    pause: "PAUSE",
+    reset: "RESET",
+  },
 };
