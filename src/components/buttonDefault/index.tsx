@@ -1,6 +1,6 @@
 import { IconsType, Images } from "@/assets/images";
 import { BaseColors } from "@/constants/theme";
-import { useThemeColor } from "@/hooks/use-theme-color";
+import { useThemeColor } from "@/src/hooks/use-theme-color";
 import { scale } from "@/src/utils/scale";
 import { LinearGradient } from "expo-linear-gradient";
 import { TouchableOpacity, TouchableOpacityProps, View } from "react-native";

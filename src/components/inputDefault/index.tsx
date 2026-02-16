@@ -6,7 +6,7 @@ import {
   type TextInputProps,
 } from "react-native";
 
-import { useThemeColor } from "@/hooks/use-theme-color";
+import { useThemeColor } from "@/src/hooks/use-theme-color";
 import { ThemedText } from "../themed-text";
 import { styles } from "./styles";
 

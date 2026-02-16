@@ -1,5 +1,5 @@
 import { Images } from "@/assets/images";
-import { useThemeColor } from "@/hooks/use-theme-color";
+import { useThemeColor } from "@/src/hooks/use-theme-color";
 import { useTranslation } from "@/src/hooks/use-translation";
 import { scale } from "@/src/utils/scale";
 import { Ionicons } from "@expo/vector-icons";

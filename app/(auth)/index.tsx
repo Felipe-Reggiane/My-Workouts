@@ -3,11 +3,11 @@ import { StyleSheet, View } from "react-native";
 
 import { Images } from "@/assets/images";
 import { BaseColors } from "@/constants/theme";
-import { useThemeColor } from "@/hooks/use-theme-color";
 import { ButtonDefault } from "@/src/components/buttonDefault";
 import { ContainerView } from "@/src/components/containerView";
 import { InputDefault } from "@/src/components/inputDefault";
 import { ThemedText } from "@/src/components/themed-text";
+import { useThemeColor } from "@/src/hooks/use-theme-color";
 import { useTranslation } from "@/src/hooks/use-translation";
 import { squareBracketPattern } from "@/src/utils/format";
 import { scale, verticalScale } from "@/src/utils/scale";
