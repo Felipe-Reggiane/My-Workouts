@@ -5,4 +5,7 @@ export const styles = StyleSheet.create({
   container: {
     paddingHorizontal: scale(20),
   },
+  content: {
+    flex: 1,
+  },
 });

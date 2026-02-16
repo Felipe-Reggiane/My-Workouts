@@ -12,6 +12,18 @@ export const en = {
       alternativeLogin: "Alternative Login with:",
       googleButton: "GOOGLE",
     },
+    createAccount: {
+      title: "Create an Account",
+      userNameLabel: "Username",
+      userNamePlaceholder: "Enter your username",
+      emailLabel: "Email",
+      emailPlaceholder: "Enter your email address",
+      passwordLabel: "Password",
+      passwordPlaceholder: "Enter your password",
+      confirmPasswordLabel: "Confirm Password",
+      confirmPasswordPlaceholder: "Re-enter your password",
+      signUpButton: "Sign Up",
+    },
   },
   tabs: {
     explore: "Explore",

@@ -12,8 +12,10 @@ import { useTranslation } from "@/src/hooks/use-translation";
 import { squareBracketPattern } from "@/src/utils/format";
 import { scale, verticalScale } from "@/src/utils/scale";
 import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 export default function AuthScreen() {
+  const router = useRouter();
   const { translateText } = useTranslation();
   const [email, setEmail] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -69,7 +71,7 @@ export default function AuthScreen() {
           onPress={() => {}}
           style={styles.loginButton}
         />
-        {/* TO DO: Add Sign up logic, navigate to sign up screen */}
+        {/* TO DO: Add Sign up logic */}
         <ButtonDefault
           variant="secondary"
           text={
@@ -85,7 +87,7 @@ export default function AuthScreen() {
               {translateText.auth.login.signUpText}
             </ThemedText>
           }
-          onPress={() => {}}
+          onPress={() => router.push("/(auth)/signUpScreen")}
           style={styles.signUpButton}
         />
         <ThemedText type="default" style={styles.alternativeLoginText}>

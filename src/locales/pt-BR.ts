@@ -12,6 +12,18 @@ export const ptBR = {
       alternativeLogin: "Login alternativo com:",
       googleButton: "GOOGLE",
     },
+    createAccount: {
+      title: "Crie uma Conta",
+      userNameLabel: "Nome de Usuário",
+      userNamePlaceholder: "Digite seu nome de usuário",
+      emailLabel: "Email",
+      emailPlaceholder: "Digite seu endereço de email",
+      passwordLabel: "Senha",
+      passwordPlaceholder: "Digite sua senha",
+      confirmPasswordLabel: "Confirme a Senha",
+      confirmPasswordPlaceholder: "Digite novamente sua senha",
+      signUpButton: "Cadastrar",
+    },
   },
   tabs: {
     explore: "Explorar",

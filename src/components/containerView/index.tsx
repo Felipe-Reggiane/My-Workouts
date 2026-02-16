@@ -10,7 +10,6 @@ export type ContainerViewProps = ViewProps & {
   darkColor?: string;
   headerLeftIcon?: "barbell" | "arrow-back";
   headerHasPrincipalIcon?: boolean;
-  onHeaderLeftPress?: () => void;
   headerTitle?: string;
 };
 
@@ -19,7 +18,6 @@ export function ContainerView({
   lightColor,
   darkColor,
   headerLeftIcon,
-  onHeaderLeftPress,
   headerTitle,
   headerHasPrincipalIcon,
   ...otherProps
@@ -36,12 +34,11 @@ export function ContainerView({
       {showHeader && (
         <Header
           leftIcon={headerLeftIcon}
-          onLeftPress={onHeaderLeftPress}
           title={headerTitle}
           headerHasPrincipalIcon={headerHasPrincipalIcon}
         />
       )}
-      <View style={style} {...otherProps}>
+      <View style={[styles.content, style]} {...otherProps}>
         {otherProps.children}
       </View>
     </SafeAreaView>
