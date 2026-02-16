@@ -5,7 +5,7 @@
 
 import { Platform } from "react-native";
 
-const BaseColors = {
+export const BaseColors = {
   white: "#FFFFFF",
   black: "#0E1216",
 
@@ -60,7 +60,7 @@ export const Colors = {
     text: BaseColors.white,
     textSecondary: BaseColors.gray[300],
     background: BaseColors.gray[900],
-    backgroundSecondary: BaseColors.gray[800],
+    backgroundSecondary: BaseColors.gray[700],
     tint: tintColorDark,
     icon: BaseColors.gray[300],
     tabIconDefault: BaseColors.gray[400],
@@ -74,8 +74,6 @@ export const Colors = {
     warning: "#FBBF24",
   },
 };
-
-export { BaseColors };
 
 export const Fonts = Platform.select({
   ios: {
