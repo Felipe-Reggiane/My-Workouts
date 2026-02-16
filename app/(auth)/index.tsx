@@ -8,11 +8,13 @@ import { ButtonDefault } from "@/src/components/buttonDefault";
 import { ContainerView } from "@/src/components/containerView";
 import { InputDefault } from "@/src/components/inputDefault";
 import { ThemedText } from "@/src/components/themed-text";
+import { useTranslation } from "@/src/hooks/use-translation";
 import { squareBracketPattern } from "@/src/utils/format";
 import { scale, verticalScale } from "@/src/utils/scale";
 import { Ionicons } from "@expo/vector-icons";
 
 export default function AuthScreen() {
+  const { translateText } = useTranslation();
   const [email, setEmail] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState("");
@@ -24,31 +26,25 @@ export default function AuthScreen() {
 
   const { Google } = Images.icons;
   return (
-    <ContainerView style={styles.container}>
-      <Ionicons
-        name={"barbell"}
-        size={scale(40)}
-        color={iconsColor}
-        style={styles.principalIcon}
-      />
+    <ContainerView style={styles.container} headerHasPrincipalIcon>
       <ThemedText type="title" style={styles.title}>
-        Login to your Account
+        {translateText.auth.login.title}
       </ThemedText>
       <View style={styles.inputsContainer}>
         <InputDefault
-          title="Email"
+          title={translateText.auth.login.emailLabel}
           value={email}
           onChangeText={setEmail}
-          placeholder="Enter you email address"
+          placeholder={translateText.auth.login.emailPlaceholder}
           leftIcon={
             <Ionicons name="mail" size={scale(20)} color={iconsColor} />
           }
         />
         <InputDefault
-          title="Password"
+          title={translateText.auth.login.passwordLabel}
           value={password}
           onChangeText={setPassword}
-          placeholder="Enter password"
+          placeholder={translateText.auth.login.passwordPlaceholder}
           leftIcon={
             <Ionicons name="lock-closed" size={scale(20)} color={iconsColor} />
           }
@@ -65,11 +61,11 @@ export default function AuthScreen() {
       </View>
       {/* TO DO: Add forgot password logic, send email */}
       <ThemedText type="default" style={styles.forgotPasswordText}>
-        Forgot password?
+        {translateText.auth.login.forgotPassword}
       </ThemedText>
       <View style={styles.buttonsContainer}>
         <ButtonDefault
-          text="Login"
+          text={translateText.auth.login.loginButton}
           onPress={() => {}}
           style={styles.loginButton}
         />
@@ -86,18 +82,18 @@ export default function AuthScreen() {
                 },
               ]}
             >
-              Don`t have an account? [Sign up]
+              {translateText.auth.login.signUpText}
             </ThemedText>
           }
           onPress={() => {}}
           style={styles.signUpButton}
         />
         <ThemedText type="default" style={styles.alternativeLoginText}>
-          Alternative Login with:
+          {translateText.auth.login.alternativeLogin}
         </ThemedText>
         {/* TO DO: Add login with google logic, integrate with firebase */}
         <ButtonDefault
-          text="GOOGLE"
+          text={translateText.auth.login.googleButton}
           onPress={() => {}}
           variant="tertiary"
           iconName={"Google"}
@@ -112,11 +108,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
   },
-  principalIcon: {
-    marginTop: verticalScale(44),
-    marginBottom: verticalScale(32),
-  },
   title: {
+    marginTop: verticalScale(20),
     marginBottom: scale(32),
   },
   inputsContainer: {
@@ -128,9 +121,9 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
     alignItems: "flex-start",
     width: "100%",
+    marginBottom: verticalScale(60),
   },
   buttonsContainer: {
-    flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
     width: "100%",

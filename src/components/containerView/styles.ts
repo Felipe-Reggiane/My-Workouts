@@ -1,7 +1,8 @@
+import { scale } from "@/src/utils/scale";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 20,
+    paddingHorizontal: scale(20),
   },
 });
